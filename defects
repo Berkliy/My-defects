@@ -1,0 +1,78 @@
+NOTE FOR REVIEWERS:I compiled these bug reports as part of my training at Stormnet Technologies. 
+These particular reports were the result of testing one of the mobile applications of a large network of gas stations.
+
+
+Bug ID: DP-I-17-184
+The use of car numbers that do not meet Belarusian standards (support for Cyrillic characters in car numbers)
+Environment: Apple Iphone 7, IOS 13
+Description: In the procedure for linking a car to a profile, it is possible to enter a car number with Cyrillic characters. According to the current legislation of Belarus and Russia, only letters that match the spelling in Cyrillic and Latin fonts can be found in car numbers
+Steps for repeating the bug: 1) Open application
+2) Open a burger type menu in the left corner of the screen
+3) Tap on the “Профиль” link
+4）Tap on the “Добавить машину” link
+5) Fill in the form with the values taken from the passport, driver’s license and vehicle registration certificate
+6) Correct the value in the "Регистрационный знак" form to  0000ШГ7
+7) Tap on the “Сохранить” link
+Actual result: The machine is saved with the entered number.
+Expectual result: The error of the entered value is displayed.
+Severity: major
+
+Bug ID: DP-A-00-004
+When registering, the driver’s license ID does not comply with accepted standards and the number of characters
+Environment: Xiaomi Redmi Note 7, Android 9 PKQ1.1 
+Description: In the machine binding procedure, there is no adequate restriction on the number of characters in the line "Driver’s License No."
+Steps for repeating the bug: 1) Open application
+2) Open a burger type menu in the left corner of the screen
+3) Tap on the “Профиль” link
+4）Tap on the “Добавить машину” link
+5) Fill in the form with the values taken from the passport and vehicle registration certificate
+6) Correct the value in the "Номер свидетельства" form to  «ЛЛЛЛ 12345678912356789123456789»
+7) Tap on the “Сохранить” link
+Actual result: The machine is saved with the entered ID number.
+Expectual result: The error of the entered value is displayed.
+Severity: major
+
+Bug ID: DP-A-00-005
+Loyalty card scan error
+Environment: Xiaomi Redmi Note 7, Android 9 PKQ1.1 
+Description: When trying to scan a loyalty card, any 13-digit barcode is taken as a loyalty card
+Steps for repeating the bug: 1) Open application
+2) Open a burger type menu in the left corner of the screen
+3) Tap on the “Профиль” link
+4）Tap on the link with barcode image
+5) Scan a 13-digit barcode...
+Actual result: The machine is saved with the entered ID number.
+Expectual result: The error of the scanned card is displayed.
+Severity: major
+
+Bug ID: DP-A-00-006
+Low maximum car gas tank limit
+Environment: Xiaomi Redmi Note 7, Android 9 PKQ1.1 
+Description: When binding the machine to the system, the maximum volume of the gas tank remains equal to 900 liters. If you try to enter a larger value, the form still changes the value to 900 liters
+Steps for repeating the bug: 1) Open application
+2) Open a burger type menu in the left corner of the screen
+3) Tap on the “Профиль” link
+4）Tap on the “Добавить машину” link
+5) Fill in the form with the values taken from the passport and vehicle registration certificate
+6) Correct the value in the "Объем бака" form to  «9999»
+7) Tap on the “Сохранить” link
+Actual result: The car is saved with a gas tank of 900 liters.
+Expectual result: The value "9999 liters" in the gas tank graph
+Severity: major
+
+Bug ID: DP-A-00-007
+When logging in, there is a repeated selection of the further login method
+Environment: Xiaomi Redmi Note 7, Android 9 PKQ1.1 
+Description: When a user exits from his profile and re-logs in during 1 session of using the application, after entering the password and login correctly, the system will ask you to choose a further way to identify the user
+Steps for repeating the bug: 1) Open application
+2) Open a burger type menu in the left corner of the screen
+3) Tap on the “Профиль” link
+4）Tap on the link with square and arrow image.
+5) Login again
+Actual result: The display shows a menu for selecting a user authentication method
+Expectual result: The display shows the start menu of the application (map with gas stations)
+Severity: major
+
+
+
+
